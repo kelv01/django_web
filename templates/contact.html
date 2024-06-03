@@ -1,0 +1,92 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}  contact {% endblock  %}</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+<body>
+  
+  <div class="icon">
+    <div><a href="main.html"><h2 class="logo">Caffein' It</h2></a></div>
+</div>
+<section class="header">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="main.html">HOME</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="login.html">SIGN UP</a></li>
+                </ul>
+            </div>
+         </nav>
+         
+</section>
+      <section class="contact">
+        <h2>Reach Us Through</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="contact-box">
+          <div class="contact-left">
+            <h3>Send Message</h3>
+            <form action>
+             <div class="input-row">
+              <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" placeholder="name">
+              </div>
+              
+              <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="text" placeholder="phone">
+              </div>
+             </div>
+             <div class="input-row">
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" placeholder="email">
+              </div>
+               
+              <div class="input-group">
+                <label for="phone">Subject</label>
+                <input type="text" placeholder="product">
+              </div>
+             </div>
+
+             <label for="Message">Message</label>
+             <textarea rows="5" placeholder="your Message"></textarea>
+             <button type="submit">send</button>
+            </form>
+          </div>
+         
+
+          <div class="contact-right">
+            <h3>Reach us</h3>
+            <table>
+              <tr>
+                <td>Email</td>
+                <td>contactus@caffeinit@gmail.com</td>
+              </tr>
+              <tr>
+                <td>Phone</td>
+                <td>+254712345678</td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>moi avenue , giraffe house ,<br> 1st floor</td>
+              </tr>
+            </table>
+        
+          </div>
+
+        </div>
+      </section>
+
+    
+
+</body>
+</html>
