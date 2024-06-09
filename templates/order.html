@@ -18,8 +18,7 @@
                     <li><a href="main.html">HOME</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="about_us.html">ABOUT US</a></li>
-                    <li><a href="login.html">LOGIN</a></li>
-                    <li><a href="login.html">SIGN UP</a></li>
+                    
                 </ul>
             </div>
          </nav>
@@ -27,27 +26,28 @@
     </section>     
     <div class="container">
   
-        <form>
+        <form method="post">
             <div class="form-box">
+                {% csrf_token %}
                 <h1>Order your favorite</h1>
                 <form>
                     <div class="input-group">
                         <div class="input-field">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Name"> {{form.name}}
                         </div>
                     </div>
                    
                     <div class="input-group">
                         <div class="input-field">
                             <i class="fa-solid fa-phone"></i>
-                            <input type="phone" placeholder="Phone">
+                            <input type="phone" placeholder="Phone"> {{form.phone}}
                         </div>
                     </div>
 
                     <div class="submit-oder">
                         <label for="drink-type">Choose item:</label>
-                        <select id="drink-type" name="drinkType">
+                        <select id="drink-type" name="drinkType"> {{form.drink_type}}
                             <option value="espresso">Espresso</option>
                             <option value="latte">Latte</option>
                             <option value="cappuccino">Cappuccino</option>
@@ -56,12 +56,12 @@
                             <option value="Sprite">Sprite</option>
                             <option value="Fanta">Fanta</option>
                             <option value="Milkshake">Milkshake</option>
-                            <option value="Milkshake">Mango juice</option>
-                            <option value="Milkshake">Passion juice</option>
+                            <option value="mango_juice">Mango juice</option>
+                            <option value="passion_juice">Passion juice</option>
                         </select>
                         <br><br>
                         <label for="size">Choose  size:</label>
-                        <select id="size" name="size">
+                        <select id="size" name="size"> {{form.size}}
                             <option value="small">Small</option>
                             <option value="medium">Medium</option>
                             <option value="large">Large</option>

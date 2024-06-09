@@ -1,4 +1,8 @@
-from django.shortcuts import render
+#views
+
+from django.shortcuts import render, redirect
+
+from .models import Order
 
 # Create your views here.
 def main (request):
@@ -16,3 +20,14 @@ def order (request):
 def contact (request):
     return render(request, 'contact.html')
 
+
+
+def order_view(request):
+    if request.method == 'POST':
+        form = Order(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('main')
+    else:
+        form = Order()
+    return render(request, 'order.html', {'form': form})
