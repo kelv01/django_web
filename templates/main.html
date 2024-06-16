@@ -15,13 +15,15 @@
             <div><a href="main.html"><h2 class="logo">Caffein' It</h2></a></div>
         </div>
         <nav>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="main.html">HOME</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="about.html">ABOUT US</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
          </nav>
          <section class="wlcm">
             <h1>Welcome To Our Caffein' It Shop!</h1>
@@ -108,5 +110,21 @@
  </section>
 
  <script src="https://kit.fontawesome.com/be4fbb70d9.js" crossorigin="anonymous"></script>
+
+ <script>
+    
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+        
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+        
+    }
+
+ </script>
 </body>
 </html>

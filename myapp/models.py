@@ -28,11 +28,17 @@ class Order(models.Model):
     phone = models.CharField(max_length=20)
     drink_type = models.CharField(max_length=50, choices=DRINK_CHOICES)
     size = models.CharField(max_length=50, choices=SIZE_CHOICES) 
-    total_price = models.IntegerField()
+    price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} - {self.drink_type} - {self.size}"
+    
+    def get_drink_type(self):
+        return dict(self.DRINK_CHOICES).get(self.drink_type)
+    
+    def get_size_display(self):
+        return dict(self.SIZE_CHOICES).get(self.size)
     
 
 
