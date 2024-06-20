@@ -185,6 +185,7 @@ nav .fa{
 .profession{
     text-align: center;
     margin-top: 5%;
+    padding-top: 8px;
     
 }
 .profession p{
@@ -194,7 +195,7 @@ nav .fa{
     
     flex-wrap: wrap;
     width: 80%;
-    min-height: 250px;
+    height: 300px;
     border: 1px solid #ddd;
     padding: 10px;
     position: relative;
@@ -205,19 +206,31 @@ nav .fa{
 .pos_col img{
    float: left;
    width: 50%;
+   max-height: 100%;
    max-width: 300px;
    margin-right: 20px;
    border: none;
 }
-/*.pos_col p{
-   
-   
-}*/
+
 .pos_col h2{
  
   padding-right: 290px;
    
 }
+
+@media (max-width: 700px) {
+    .profession{
+        font-size: 20px;
+        
+    }
+    .pos_col{
+      
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+  
+}
+
 
 
 /*style for footer section*/
