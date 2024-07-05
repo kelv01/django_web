@@ -14,6 +14,9 @@ def about (request):
 def login (request):
     return render(request, 'login.html')
 
+def signup (request):
+    return render(request, 'signup.html')
+
 def order (request):
     return render(request, 'order.html')
 
@@ -21,7 +24,7 @@ def contact (request):
     return render(request, 'contact.html')
 
 
-
+#//FIXME: add order confirmation and caculate price ...
 def order_view(request):
     if request.method == 'POST':
         form = Order(request.POST)
@@ -40,4 +43,4 @@ def order_view(request):
         return redirect('main')
     else:
         form = Order()
-    return render(request, 'order.html', {'form': form})
+    return render(request, 'order.html', {'form': form}) 

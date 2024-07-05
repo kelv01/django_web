@@ -1,6 +1,22 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 # Create your models here.
+class UserProfile(models.Model):
+    username = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)
+    #confirm_password = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.username
+
+#receiver(post_save, sender=user)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Order.objects.create(user=instance)
+    instance.userprofile.save()
 
 class Order(models.Model):
     DRINK_CHOICES = (

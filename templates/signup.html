@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+<section class="header">
+        <div class="icon">
+            <div><a href="main.html"><h2 class="logo">Caffein' It</h2></a></div>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="main.html">HOME</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="login.html">SIGN UP</a></li>
+                </ul>
+            </div>
+         </nav>
+</section>         
+    <div class="container">
+  
+        <form>
+            <div class="form-box">
+                <h1>login or Sign Up <br>with user</h1>
+                <form>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="phone" placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <p>Lost Password <a href="#">Click Here</a></p>
+                    </div>
+                    <div class="btn-field">
+                        <button type="button">Sign up</button>
+                        <button type="button" class="disable">Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </form>
+    </div>
+<section class="footer">
+    
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Magnam doloribus iste fugiat numquam officia porro, <br>qui reprehenderit sequi consequuntur aliquam eligendi illum omnis quas voluptates <br>repudiandae quaerat, iusto ab laboriosam.</p>
+    <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        
+        
+        
+    </div>
+    
+
+ </section>
+    <script src="https://kit.fontawesome.com/be4fbb70d9.js" crossorigin="anonymous"></script>
+</body>
+</html>
