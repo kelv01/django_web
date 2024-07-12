@@ -1,31 +1,16 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{%static 'css/order.css'%}">
-</head>
-<body>
-    <section class="header">
-        <div class="icon">
-            <div><a href="main.html"><h2 class="logo">Caffein' It</h2></a></div>
-        </div>
-        <nav>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="main.html">HOME</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="about_us.html">ABOUT US</a></li>
-                    <li><a href="login.html">LOGIN</a></li>
-                    <li><a href="signup.html">SIGNUP</a></li>
-                    
-                </ul>
-            </div>
-         </nav>
+{% extends "base.html" %}
 
-    </section>     
+{% load static %}
+
+    {% block title %}
+   
+    <title>order</title>
+    <link rel="stylesheet" href="{%static 'css/order.css'%}">
+    {% endblock title %}
+
+    
+    {% block content %}
+    <!--order start-->
     <div class="container">
   
         <form method="post">
@@ -78,22 +63,6 @@
             </div>
         </form>
     </div>
-    <section class="footer">
-    
-        <h4>About Us</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Magnam doloribus iste fugiat numquam officia porro, <br>qui reprehenderit sequi consequuntur aliquam eligendi illum omnis quas voluptates <br>repudiandae quaerat, iusto ab laboriosam.</p>
-    <div class="icons">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-x-twitter"></i>
-        <i class="fa-brands fa-tiktok"></i>
-        
-        
-        
-    </div>
-    
-
- </section>
- <script src="https://kit.fontawesome.com/be4fbb70d9.js" crossorigin="anonymous"></script>
-</body>
-</html>
+    <!--order end-->
+    {% endblock content %}
+   

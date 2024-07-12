@@ -1,32 +1,16 @@
+{% extends "base.html" %}
 
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}  contact {% endblock  %}</title>
+
+    {% block title %} 
+    <title> contact </title>
     <link rel="stylesheet" href="{% static 'css/contact.css' %}">
-</head>
-<body>
+    {% endblock  %}
+
+
   
-  <div class="icon">
-    <div><a href="main.html"><h2 class="logo">Caffein' It</h2></a></div>
-</div>
-<section class="header">
-        <nav>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="main.html">HOME</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="about_us.html">ABOUT US</a></li>
-                    <li><a href="login.html">LOGIN</a></li>
-                    <li><a href="signup.html">SIGNUP</a></li>
-                 
-                </ul>
-            </div>
-         </nav>
-         
+{% block content %}
+       <!--contact start-->  
 </section>
       <section class="contact">
         <h2>Reach Us Through</h2>
@@ -87,7 +71,8 @@
         </div>
       </section>
 
+      <!--contact start--> 
+      {% endblock content %}
+
     
 
-</body>
-</html>
